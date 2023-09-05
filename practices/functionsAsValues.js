@@ -14,3 +14,14 @@ console.log(doubleNumber)
 
 const simpleCalculation = doubleNumber;
 console.log(simpleCalculation);
+
+const uppercaseMessage = (message) => {
+    return message.toUpperCase();
+}
+
+const transform = (message, transformFunction) => {
+    return transformFunction(message);
+}
+
+module.exports = uppercaseMessage;
+module.exports = transform;
