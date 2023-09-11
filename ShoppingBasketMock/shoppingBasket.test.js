@@ -59,10 +59,21 @@ describe('Unit/Mock test to create a basket', () => {
     })
 
 
-    it('It returns the name of the candy', () => {
+    it('It returns price of the candy in the basket', () => {
         const shoppingBasket = new ShoppingBasket();
         const mockCandy = {getPrice: () => 1.99}
         shoppingBasket.addItem(mockCandy);
         expect(shoppingBasket.getTotalPrice()).toEqual(1.99);
     })
+
+
+    it('It returns the total price of the candy - discount', () => {
+        const shoppingBasket = new ShoppingBasket();
+        const mockCandy = {getPrice: () => 1.99}
+        shoppingBasket.addItem(mockCandy);
+        shoppingBasket.applyDiscount(1);
+        expect(shoppingBasket.getTotalPrice()).toEqual(0.99);
+    })
+
+
 })
