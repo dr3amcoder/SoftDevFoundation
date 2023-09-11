@@ -1,6 +1,7 @@
 const Candy = require('./candy');
 
 class ShoppingBasket {
+    // let #basket;
     constructor() {
         this.basket = [];
     }
